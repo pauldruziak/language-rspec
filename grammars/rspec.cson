@@ -1,5 +1,5 @@
 'fileTypes': [
-  'spec.rb'
+  '*_spec.rb'
 ]
 'name': 'RSpec'
 'patterns': [
@@ -56,9 +56,21 @@
     'name': 'meta.rspec.rspec-example'
     'patterns': [
       {
-        'begin': '(\\s[\'\"])'
-        'end': '([\'\"]\\s)'
+        'begin': '\\s([\'\"])'
+        'end': '\\1'
         'name': 'entity.name.rspec'
+      }
+      {
+        'begin': '(,)'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.separator.object.ruby'
+        'end': '\\s(?=do)'
+        'patterns': [
+          {
+            'include': 'source.ruby'
+          }
+        ]
       }
     ]
   'pending':
