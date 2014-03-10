@@ -39,9 +39,21 @@
     'name': 'meta.rspec.behaviour'
     'patterns': [
       {
-        'begin': '(\\s[\'\"])'
-        'end': '([\'\"]\\s)'
+        'begin': '\\s([\'\"])'
+        'end': '\\1'
         'name': 'entity.name.rspec'
+      }
+      {
+        'begin': '(,)'
+        'beginCaptures':
+          '1':
+            'name': 'punctuation.separator.object.ruby'
+        'end': '\\s(?=do)'
+        'patterns': [
+          {
+            'include': 'source.ruby'
+          }
+        ]
       }
     ]
   'example':
