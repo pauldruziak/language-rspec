@@ -1,3 +1,7 @@
+## 0.1.2
+
+* Improve expect snippets (#6)
+
 ## 0.1.1 - Small fixes
 
 * Fix captures for examples with metadata (#2)
