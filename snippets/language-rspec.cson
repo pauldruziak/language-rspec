@@ -67,10 +67,10 @@
     'body': 'exactly(${1:n}).times'
   'expect':
     'prefix': 'exp'
-    'body': 'expect(${1:target}).to'
+    'body': 'expect(${1:subject}).${2:not_}to ${3:${4:eq} ${5:object}}'
   'expect with block':
     'prefix': 'expb'
-    'body': 'expect { ${1:target} }.to'
+    'body': 'expect { ${1:target} }.${2:not_}to ${3:raise_error}'
   'feature':
     'prefix': 'sce'
     'body': 'scenario "${1:scenario description}" do\n  $0\nend'
