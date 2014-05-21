@@ -41,7 +41,7 @@
       {
         'begin': '\\s([\'\"])'
         'end': '\\1'
-        'name': 'entity.name.rspec'
+        'name': 'string'
       }
       {
         'begin': '(,)'
@@ -70,7 +70,7 @@
       {
         'begin': '\\s([\'\"])'
         'end': '\\1'
-        'name': 'entity.name.rspec'
+        'name': 'string'
       }
       {
         'begin': '(,)'
@@ -90,7 +90,7 @@
       '1':
         'name': 'keyword.other.rspec.pending'
       '2':
-        'name': 'entity.name.rspec'
+        'name': 'string'
     'match': '^\\s*(it|specify|scenario)\\s+(.*\\S)(?<!do)\\s*$'
     'name': 'meta.rspec.pending'
   'single-line-example':
