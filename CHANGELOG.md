@@ -1,3 +1,7 @@
+## 0.1.3
+
+* Change token in it and describe blocks (#8)
+
 ## 0.1.2
 
 * Improve expect snippets (#6)
