@@ -1,3 +1,7 @@
+## 0.1.4
+
+* Switch to single quotes for snippets (#11)
+
 ## 0.1.3
 
 * Change token in it and describe blocks (#8)
