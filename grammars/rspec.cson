@@ -1,7 +1,8 @@
+'name': 'RSpec'
+'scopeName': 'source.rspec'
 'fileTypes': [
   'spec.rb'
 ]
-'name': 'RSpec'
 'patterns': [
   {
     'match': '(?<!\\.)\\b(before|after|around)\\b(?![?!])'
@@ -11,16 +12,8 @@
     'include': '#behaviour'
   }
   {
-    'include': '#single-line-example'
-  }
-  {
-    'include': '#pending'
-  }
-  {
-    'include': '#example'
-  }
-  {
-    'include': '#example_name'
+    'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|xspecify|xexample)\\b'
+    'name': 'keyword.other.exxample.rspec'
   }
   {
     'include': 'source.ruby'
@@ -56,46 +49,3 @@
         ]
       }
     ]
-  'example':
-    'begin': '^\\s*(it|specify|scenario)\\b'
-    'beginCaptures':
-      '1':
-        'name': 'keyword.other.rspec.rspec-example'
-    'end': '\\b(do)\\s*$'
-    'endCaptures':
-      '1':
-        'name': 'keyword.control.ruby.start-block'
-    'name': 'meta.rspec.rspec-example'
-    'patterns': [
-      {
-        'begin': '\\s([\'\"])'
-        'end': '\\1'
-        'name': 'string'
-      }
-      {
-        'begin': '(,)'
-        'beginCaptures':
-          '1':
-            'name': 'punctuation.separator.object.ruby'
-        'end': '\\s(?=do)'
-        'patterns': [
-          {
-            'include': 'source.ruby'
-          }
-        ]
-      }
-    ]
-  'pending':
-    'captures':
-      '1':
-        'name': 'keyword.other.rspec.pending'
-      '2':
-        'name': 'string'
-    'match': '^\\s*(it|specify|scenario)\\s+(.*\\S)(?<!do)\\s*$'
-    'name': 'meta.rspec.pending'
-  'single-line-example':
-    'captures':
-      '1':
-        'name': 'keyword.other.rspec.rspec-example'
-    'match': '^\\s*(it|specify|scenario)\\s*{'
-'scopeName': 'source.ruby.rspec'
