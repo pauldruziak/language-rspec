@@ -1,8 +1,8 @@
 'name': 'RSpec'
-'scopeName': 'source.rspec'
 'fileTypes': [
   'spec.rb'
 ]
+'scopeName': 'source.ruby.rspec'
 'patterns': [
   {
     'include': '#behaviour'
