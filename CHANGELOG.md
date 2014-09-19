@@ -1,3 +1,13 @@
+## 0.2.1
+
+* Add .hook class to hook grammars (#13)
+* Fix broken snippets (#14)
+* Update CHANGELOG.md (#15)
+
+## 0.2.0
+
+* Fix example grammar (#12)
+
 ## 0.1.4
 
 * Switch to single quotes for snippets (#11)
