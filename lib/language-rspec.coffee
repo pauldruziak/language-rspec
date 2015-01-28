@@ -2,10 +2,9 @@
 
 module.exports =
   activate: (state) ->
-    atom.workspaceView.eachEditorView (editorView) =>
-      editor = editorView.getEditor()
+    atom.workspace.observeTextEditors (editor) =>
       return unless @_isRspecFile(editor.getPath())
-      rspecGrammar = atom.syntax.grammarForScopeName 'source.ruby.rspec'
+      rspecGrammar = atom.grammars.grammarForScopeName 'source.ruby.rspec'
       return unless rspecGrammar?
       editor.setGrammar rspecGrammar
 
