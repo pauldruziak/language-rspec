@@ -1,3 +1,7 @@
+## 0.3.0
+
+* Fix issue with new atom workspace api (#21)
+
 ## 0.2.1
 
 * Add .hook class to hook grammars (#13)
