@@ -1,16 +1,16 @@
 '.source.ruby.rspec':
   'describe (String)':
     'prefix': 'des'
-    'body': "describe '${1:subject}' do\n  $0\nend"
+    'body': "describe \"${1:subject}\" do\n  $0\nend"
   'describe (type)':
     'prefix': 'dest'
     'body': 'describe ${1:Type} do\n  $0\nend'
   'describe (type, string)':
     'prefix': 'dests'
-    'body': "describe ${1:Type}, '${2:description}' do\n  $0\nend"
+    'body': "describe ${1:Type}, \"${2:description}\" do\n  $0\nend"
   'it (does something)':
     'prefix': 'it'
-    'body': "it '${1:does something}'${2: do\n  $0\nend}"
+    'body': "it \"${1:does something}\"${2: do\n  $0\nend}"
   'Matcher (Custom)':
     'prefix': 'matc'
     'body': 'class ${1:ReverseTo}\n  def initialize($3)\n    @$3 = $3\n  end\n\n  def matches?(actual)\n    @actual = actual\n    # Satisfy expectation here. Return false or raise an error if it\'s not met.\n    ${0:@actual.reverse.should == @$3}\n    true\n  end\n\n  def failure_message_for_should\n    "expected #{@actual.inspect} to $2 #{@$3.inspect}, but it didn\'t"\n  end\n\n  def failure_message_for_should_not\n    "expected #{@actual.inspect} not to $2 #{@$3.inspect}, but it did"\n  end\nend\n\ndef ${2:reverse_to}(${3:expected})\n  $1.new($3)\nend'
@@ -55,13 +55,13 @@
     'body': 'RSpec.configure do |config|\n  config.$0\nend'
   'context':
     'prefix': 'con'
-    'body': "context '${1:context}' do\n  $0\nend"
+    'body': "context \"${1:context}\" do\n  $0\nend"
   'describe (Controller)':
     'prefix': 'desc'
     'body': 'require File.expand_path(File.dirname(__FILE__) + \'/../spec_helper\')\n\ndescribe ${1:controller} do\n  $0\nend'
   'describe (RESTful Controller)':
     'prefix': 'desrc'
-    'body': "describe ${1:controller}, '${2:GET|POST|PUT|DELETE} ${3:/some/path}${4: with some parameters}' do\n  $0\nend"
+    'body': "describe ${1:controller}, \"${2:GET|POST|PUT|DELETE} ${3:/some/path}${4: with some parameters}\" do\n  $0\nend"
   'exactly':
     'prefix': 'ex'
     'body': 'exactly(${1:n}).times'
@@ -76,7 +76,7 @@
     'body': "scenario '${1:scenario description}' do\n  $0\nend"
   'it (should do something)':
     'prefix': 'its'
-    'body': "it 'should ${1:do something}'${2: do\n  $0\nend}"
+    'body': "it \"should ${1:do something}\"${2: do\n  $0\nend}"
   'let':
     'prefix': 'let'
     'body': 'let(:${1:instance}) { $0 }'
