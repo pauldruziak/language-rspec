@@ -14,6 +14,9 @@
   'it (should do something)':
     'prefix': 'iti'
     'body': "it { should ${1:matcher} }"
+  'it (is expected to do something)':
+    'prefix': 'its'
+    'body': "it { is_expected.to ${1:matcher} }"
   'Matcher (Custom)':
     'prefix': 'matc'
     'body': 'class ${1:ReverseTo}\n  def initialize($3)\n    @$3 = $3\n  end\n\n  def matches?(actual)\n    @actual = actual\n    # Satisfy expectation here. Return false or raise an error if it\'s not met.\n    ${0:@actual.reverse.should == @$3}\n    true\n  end\n\n  def failure_message_for_should\n    "expected #{@actual.inspect} to $2 #{@$3.inspect}, but it didn\'t"\n  end\n\n  def failure_message_for_should_not\n    "expected #{@actual.inspect} not to $2 #{@$3.inspect}, but it did"\n  end\nend\n\ndef ${2:reverse_to}(${3:expected})\n  $1.new($3)\nend'
