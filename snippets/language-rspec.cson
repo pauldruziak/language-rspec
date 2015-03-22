@@ -15,7 +15,7 @@
     'prefix': 'iti'
     'body': "it { should ${1:matcher} }"
   'it (is expected to do something)':
-    'prefix': 'its'
+    'prefix': 'itis'
     'body': "it { is_expected.to ${1:matcher} }"
   'Matcher (Custom)':
     'prefix': 'matc'
