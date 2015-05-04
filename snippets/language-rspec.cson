@@ -20,6 +20,9 @@
   'Require spec_helper':
     'prefix': 'reqs'
     'body': 'require \'spec_helper\'\n\n'
+  'Require rails_helper':
+    'prefix': 'reqr'
+    'body': 'require \'rails_helper\'\n\n'
   'controller_name':
     'prefix': 'conn'
     'body': 'controller_name :${1:controller}'
