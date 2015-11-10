@@ -8,7 +8,7 @@
     "spec",
     "ruby",
     "test",
-    "bdd",
+    "bdd"
   ],
   "repository": "https://github.com/paveldruzyak/language-rspec",
   "license": "MIT",
