@@ -15,6 +15,10 @@
     'match': '(?<!\\.)\\b(before|after|around)\\b(?![?!])'
     'name': 'keyword.other.hook.rspec'
   }
+    {
+      'match': '(?<!\\. )\\b(expect|allow|to|receive|and_return|with|eq|raise_error)\\b(?![?!])'
+      'name': 'keyword.other.hook.rspec'
+    }
   {
     'include': 'source.ruby'
   }
