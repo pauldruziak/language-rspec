@@ -32,9 +32,26 @@
     'name': 'meta.rspec.behaviour'
     'patterns': [
       {
-        'begin': '\\s([\'\"])'
-        'end': '\\1'
-        'name': 'string'
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.ruby'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.ruby'
+        'name': 'string.quoted.double.interpolated.ruby'
+      }
+      {
+        'begin': "'"
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.ruby'
+        'end': "'"
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.ruby'
+        'name': 'string.quoted.single.ruby'
       }
       {
         'begin': '(,)'
