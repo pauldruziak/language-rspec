@@ -19,10 +19,10 @@
     'match': '(?<!\\. )\\b(receive|and_return|with|eq|raise_error|be_nil|at_least|once|twice|exactly|times|at_most|exactly|and_throw|and_yield)\\b(?![?!])'
     'name': 'keyword.other.hook.rspec'
   }
-    {
-      'match': '(?<!\\. )\\b(expect|allow|to|to_not)\\b(?![?!])'
-      'name': 'keyword.control.ruby'
-    }
+  {
+    'match': '(?<!\\. )\\b(expect|allow|to|to_not)\\b(?![?!])'
+    'name': 'keyword.control.ruby'
+  }
   {
     'include': 'source.ruby'
   }
