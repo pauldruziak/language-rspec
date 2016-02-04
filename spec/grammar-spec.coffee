@@ -20,11 +20,21 @@ describe 'rspec grammar', ->
 
     {tokens} = grammar.tokenizeLine('describe "some text" do')
     expect(tokens[0]).toEqual value: 'describe', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.other.rspec.behaviour']
-    expect(tokens[1]).toEqual value: ' "', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string']
-    expect(tokens[2]).toEqual value: 'some text', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string']
-    expect(tokens[3]).toEqual value: '"', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string']
-    expect(tokens[4]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
-    expect(tokens[5]).toEqual value: 'do', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.control.ruby.start-block']
+    expect(tokens[1]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
+    expect(tokens[2]).toEqual value: '"', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string.quoted.double.interpolated.ruby', 'punctuation.definition.string.begin.ruby']
+    expect(tokens[3]).toEqual value: 'some text', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string.quoted.double.interpolated.ruby']
+    expect(tokens[4]).toEqual value: '"', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string.quoted.double.interpolated.ruby', 'punctuation.definition.string.end.ruby']
+    expect(tokens[5]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
+    expect(tokens[6]).toEqual value: 'do', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.control.ruby.start-block']
+
+    {tokens} = grammar.tokenizeLine("describe 'some text' do")
+    expect(tokens[0]).toEqual value: 'describe', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.other.rspec.behaviour']
+    expect(tokens[1]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
+    expect(tokens[2]).toEqual value: "'", scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string.quoted.single.ruby', 'punctuation.definition.string.begin.ruby']
+    expect(tokens[3]).toEqual value: 'some text', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string.quoted.single.ruby']
+    expect(tokens[4]).toEqual value: "'", scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'string.quoted.single.ruby', 'punctuation.definition.string.end.ruby']
+    expect(tokens[5]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
+    expect(tokens[6]).toEqual value: 'do', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.control.ruby.start-block']
 
     {tokens} = grammar.tokenizeLine('RSpec.describe PostController do')
     expect(tokens[0]).toEqual value: 'RSpec', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'support.class.ruby']
