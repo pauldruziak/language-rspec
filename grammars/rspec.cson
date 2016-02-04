@@ -9,7 +9,7 @@
   }
   {
     'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|xspecify|xexample)\\b'
-    'name': 'keyword.other.exxample.rspec'
+    'name': 'keyword.other.example.rspec'
   }
   {
     'match': '(?<!\\.)\\b(before|after|around)\\b(?![?!])'
