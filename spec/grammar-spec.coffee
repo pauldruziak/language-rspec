@@ -9,7 +9,7 @@ describe 'rspec grammar', ->
       grammar = atom.grammars.grammarForScopeName('source.ruby.rspec')
 
   it 'parses the grammar', ->
-    expect(grammar).toBeDefined()
+    expect(grammar).toBeTruthy()
     expect(grammar.scopeName).toBe 'source.ruby.rspec'
 
   it 'tokenizes describe', ->
