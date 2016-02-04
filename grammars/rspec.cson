@@ -9,11 +9,27 @@
   }
   {
     'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|xspecify|xexample)\\b'
-    'name': 'keyword.other.exxample.rspec'
-  }
+    'name': 'keyword.other.example.rspec'
+  },
   {
     'match': '(?<!\\.)\\b(before|after|around)\\b(?![?!])'
     'name': 'keyword.other.hook.rspec'
+  }
+  {
+    'match': '(?<!\\.)\\b(subject|let)\\b'
+    'name': 'variable.keyword.rspec'
+  }
+  {
+    'match': '(?<!\\.)\\b(double|instance_double|instance_spy|mock|spy|stub|stub_chain)\\b'
+    'name': 'keyword.mock.rspec'
+  }
+  {
+    'match': '(?!\\.)(and_raise|and_return|and_throw|and_yield|build_child|called_max_times|expected_args|invoke|matches)\\b'
+    'name': 'keyword.mock_methods.rspec'
+  }
+  {
+    'match': '(?<!\\.)\\b(all|allow|allow_any_instance_of|assigns|be|change|described_class|eq|eql|equal|errors_on|exist|expect|expect_any_instance_of|have|have_at_least|have_at_most|have_exactly|include|is_expected|match|match_array|matcher|not_to|raise_error|raise_exception|receive|respond_to|satisfy|throw_symbol|to|to_not|when|wrap_expectation)\\b'
+    'name': 'keyword.matchers.rspec'
   }
   {
     'include': 'source.ruby'
@@ -50,4 +66,5 @@
           }
         ]
       }
+
     ]
