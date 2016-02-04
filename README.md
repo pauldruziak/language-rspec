@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/paveldruzyak/language-rspec.svg?branch=master)](https://travis-ci.org/paveldruzyak/language-rspec)
+
 # RSpec language support in Atom
 
 Adds syntax highlighting and snippets to RSpec file in Atom.
