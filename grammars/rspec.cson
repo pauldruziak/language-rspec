@@ -56,6 +56,14 @@
         'name': 'string.quoted.single.ruby'
       }
       {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.constant.ruby'
+        'comment': 'symbols'
+        'match': '(?<!:)(:)(?>[$a-zA-Z_]\\w*(?>[?!]|=(?![>=]))?|===?|<=>|>[>=]?|<[<=]?|[%&`/\\|]|\\*\\*?|=?~|[-+]@?|\\[\\]=?|@@?[a-zA-Z_]\\w*)'
+        'name': 'constant.other.symbol.ruby'
+      }
+      {
         'begin': '(,)'
         'beginCaptures':
           '1':

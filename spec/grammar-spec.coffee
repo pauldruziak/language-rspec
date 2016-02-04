@@ -36,6 +36,14 @@ describe 'rspec grammar', ->
     expect(tokens[5]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
     expect(tokens[6]).toEqual value: 'do', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.control.ruby.start-block']
 
+    {tokens} = grammar.tokenizeLine("describe :some_text do")
+    expect(tokens[0]).toEqual value: 'describe', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.other.rspec.behaviour']
+    expect(tokens[1]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
+    expect(tokens[2]).toEqual value: ':', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'constant.other.symbol.ruby', 'punctuation.definition.constant.ruby']
+    expect(tokens[3]).toEqual value: 'some_text', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'constant.other.symbol.ruby']
+    expect(tokens[4]).toEqual value: ' ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
+    expect(tokens[5]).toEqual value: 'do', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.control.ruby.start-block']
+
     {tokens} = grammar.tokenizeLine('RSpec.describe PostController do')
     expect(tokens[0]).toEqual value: 'RSpec', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'support.class.ruby']
     expect(tokens[1]).toEqual value: '.', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
