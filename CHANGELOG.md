@@ -1,3 +1,13 @@
+## 0.5.0
+
+* Add a single line expectation with an implicit subject (#17)
+* Add package keywords
+* require 'rails_helper' #23
+* Add support for "RSpec.describe" and others. #25
+* Add quoted scopes to strings #29
+* Highlight symbols #30
+* Add more specs
+
 ## 0.3.0
 
 * Fix issue with new atom workspace api (#21)
