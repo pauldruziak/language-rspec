@@ -1,3 +1,7 @@
+## 0.5.1
+
+* Fix deprecation warning about `path.basename` (#37)
+
 ## 0.5.0
 
 * Add a single line expectation with an implicit subject (#17)
