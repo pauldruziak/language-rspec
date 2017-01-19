@@ -13,5 +13,6 @@ module.exports =
   serialize: ->
 
   _isRspecFile: (filename) ->
+    return false unless typeof(filename) == 'string'
     rspec_filetype = 'spec.rb'
     basename(filename).slice(-rspec_filetype.length) == rspec_filetype
