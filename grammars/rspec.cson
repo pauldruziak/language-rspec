@@ -12,6 +12,10 @@
     'name': 'keyword.other.example.rspec'
   }
   {
+    'match': '(should_not|should)'
+    'name': 'keyword.other.example.rspec'
+  }
+  {
     'match': '(?<!\\.)\\b(before|after|around)\\b(?![?!])'
     'name': 'keyword.other.hook.rspec'
   }

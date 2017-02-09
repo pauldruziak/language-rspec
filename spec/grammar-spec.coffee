@@ -53,7 +53,7 @@ describe 'rspec grammar', ->
 
   it 'tokenizes keywords', ->
     keywordLists =
-      'keyword.other.example.rspec': ['it', 'specify', 'example', 'scenario', 'pending', 'skip', 'xit', 'xspecify', 'xexample', 'expect']
+      'keyword.other.example.rspec': ['it', 'specify', 'example', 'scenario', 'pending', 'skip', 'xit', 'xspecify', 'xexample', 'expect', 'should_not', 'should']
       'keyword.other.hook.rspec': ['before', 'after', 'around']
 
     for scope, list of keywordLists
