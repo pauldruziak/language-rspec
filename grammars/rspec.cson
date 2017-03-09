@@ -8,7 +8,7 @@
     'include': '#behaviour'
   }
   {
-    'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|xspecify|xexample|expect)\\b'
+    'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|xspecify|xexample|expect)(?!\\s=|=)\\b'
     'name': 'keyword.other.example.rspec'
   }
   {
