@@ -25,7 +25,7 @@
 ]
 'repository':
   'behaviour':
-    'begin': '^(RSpec)?(?:\\.|\\s*)(describe|context|feature)\\b'
+    'begin': '^(RSpec)?(?:\\.|\\s*)(describe|context|feature)(?! =|=)\\b'
     'beginCaptures':
       '1':
         'name': 'support.class.ruby'
