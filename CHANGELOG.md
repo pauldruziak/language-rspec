@@ -1,3 +1,7 @@
+## 0.6.1
+
+* Verify that keyword is not a variable (#40)
+
 ## 0.6.0
 
 * Verify that `expect` is not a variable (#41)

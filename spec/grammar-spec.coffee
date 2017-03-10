@@ -51,6 +51,12 @@ describe 'rspec grammar', ->
     expect(tokens[3]).toEqual value: ' PostController ', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour']
     expect(tokens[4]).toEqual value: 'do', scopes: ['source.ruby.rspec', 'meta.rspec.behaviour', 'keyword.control.ruby.start-block']
 
+    {tokens} = grammar.tokenizeLine('describe = create(:describe)')
+    expect(tokens[0]).toEqual value: 'describe = create(:describe)', scopes: ['source.ruby.rspec']
+
+    {tokens} = grammar.tokenizeLine('describe=create(:describe)')
+    expect(tokens[0]).toEqual value: 'describe=create(:describe)', scopes: ['source.ruby.rspec']
+
   it 'tokenizes expect', ->
     {tokens} = grammar.tokenizeLine('expect(a).to eq b')
     expect(tokens[0]).toEqual value: 'expect', scopes: ['source.ruby.rspec', 'keyword.other.example.rspec']
