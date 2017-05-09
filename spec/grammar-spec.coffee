@@ -60,7 +60,9 @@ describe 'rspec grammar', ->
   it 'tokenizes expect', ->
     {tokens} = grammar.tokenizeLine('expect(a).to eq b')
     expect(tokens[0]).toEqual value: 'expect', scopes: ['source.ruby.rspec', 'keyword.other.example.rspec']
-    expect(tokens[1]).toEqual value: '(a).to eq b', scopes: ['source.ruby.rspec']
+    expect(tokens[1]).toEqual value: '(a).to ', scopes: ['source.ruby.rspec']
+    expect(tokens[2]).toEqual value: 'eq', scopes: ['source.ruby.rspec', 'keyword.other.matcher.rspec']
+    expect(tokens[3]).toEqual value: ' b', scopes: ['source.ruby.rspec']
 
     {tokens} = grammar.tokenizeLine('expect do')
     expect(tokens[0]).toEqual value: 'expect', scopes: ['source.ruby.rspec', 'keyword.other.example.rspec']
