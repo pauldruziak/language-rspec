@@ -1,3 +1,7 @@
+## 0.6.2
+
+* Highlight eq and equal (#43)
+
 ## 0.6.1
 
 * Verify that keyword is not a variable (#40)
