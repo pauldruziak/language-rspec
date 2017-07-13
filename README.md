@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/paveldruzyak/language-rspec.svg?branch=master)](https://travis-ci.org/paveldruzyak/language-rspec)
+[![Build Status](https://travis-ci.org/pauldruzyak/language-rspec.svg?branch=master)](https://travis-ci.org/paveldruzyak/language-rspec)
 
 # RSpec language support in Atom
 
