@@ -10,7 +10,7 @@
     "test",
     "bdd"
   ],
-  "repository": "https://github.com/paveldruzyak/language-rspec",
+  "repository": "https://github.com/pauldruziak/language-rspec",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
