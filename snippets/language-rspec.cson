@@ -275,3 +275,30 @@
   'expect match array':
     'prefix': 'expma'
     'body': 'expect(${1:actual}).${2:to} match_array(${4:expected_array})'
+  'double':
+    'prefix': 'dou'
+    'body': "double(${1:'ident'}, ${2:foo}: ${3:bar})"
+  'instance double':
+    'prefix': 'idou'
+    'body': "instance_double(${1:'Object'}, :${2:ident}, ${3:foo}: ${4:bar})"
+  'allow':
+    'prefix': 'allow'
+    'body': 'allow(${1:obj}).to receive(:${2:msg})'
+  'allow with block':
+    'prefix': 'allowb'
+    'body': 'allow(${1:obj}).to receive(:${2:msg}) { $3 }'
+  'allow with return':
+    'prefix': 'allowr'
+    'body': 'allow(${1:obj}).to receive(:${2:msg}).and_return(${3:result})'
+  'allow messsages':
+    'prefix': 'allowm'
+    'body': 'allow(${1:obj}).to receive_messages(${2:msg1}: ${3:res1}, ${4:msg2}: ${5:res2})'
+  'expect receive':
+    'prefix': 'expre'
+    'body': 'expect(${1:double}).${2:to} receive(:${3:msg}) { $4 }'
+  'expect receive with args':
+    'prefix': 'expwith'
+    'body': 'expect(${1:double}).${2:to} receive(:${3:msg}).with(${4:args})'
+  'expect ordered':
+    'prefix': 'expo'
+    'body': 'expect(${1:double}).${2:to} receive(:${3:msg}).ordered'
