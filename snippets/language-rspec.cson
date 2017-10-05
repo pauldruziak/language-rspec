@@ -242,3 +242,36 @@
   'twice':
     'prefix': 'tw'
     'body': 'twice'
+  'expect instance':
+    'prefix': 'expin'
+    'body': 'expect(${1:actual}).${2:to} be_instance_of(${3:expected})'
+  'expect true':
+    'prefix': 'exptr'
+    'body': 'expect(${1:actual}).${2:to} be ${3:true}'
+  'expect false':
+    'prefix': 'expf'
+    'body': 'expect(${1:actual}).${2:to} be ${3:false}'
+  'expect nil':
+    'prefix': 'expn'
+    'body': 'expect(${1:actual}).${2:to} be_${3:nil}'
+  'expect custom predicate':
+    'prefix': 'expx'
+    'body': 'expect(${1:actual}).${2:to} be_${3:xxx}'
+  'expect range':
+    'prefix': 'expr'
+    'body': 'expect(${1:first}..${2:last}).${3:to} cover(${4:this})'
+  'expect include':
+    'prefix': 'expi'
+    'body': 'expect(${1:actual}).${2:to} include(${4:expected})'
+  'expect start with':
+    'prefix': 'expstw'
+    'body': 'expect(${1:actual}).${2:to} start_with(${4:expected})'
+  'expect end with':
+    'prefix': 'expetw'
+    'body': 'expect(${1:actual}).${2:to} end_with(${4:expected})'
+  'expect contain':
+    'prefix': 'expcon'
+    'body': 'expect(${1:actual}).${2:to} contain_exactly(${4:individual}, ${5:items})'
+  'expect match array':
+    'prefix': 'expma'
+    'body': 'expect(${1:actual}).${2:to} match_array(${4:expected_array})'
