@@ -302,3 +302,6 @@
   'expect ordered':
     'prefix': 'expo'
     'body': 'expect(${1:double}).${2:to} receive(:${3:msg}).ordered'
+  'described_class':
+    'prefix': 'descc'
+    'body': 'described_class'
