@@ -1,3 +1,7 @@
+## 0.7.0
+
+* New snippets (#45)
+
 ## 0.6.2
 
 * Highlight eq and equal (#43)
