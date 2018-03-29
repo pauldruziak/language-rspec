@@ -11,7 +11,7 @@
   'it (does something)':
     'prefix': 'it'
     'body': "it '${1:does something}'${2: do\n  $0\nend}"
-  'it (should do something)':
+  'it { should do something }':
     'prefix': 'iti'
     'body': "it { should ${1:matcher} }"
   'it (is expected to do something)':
