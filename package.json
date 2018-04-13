@@ -1,7 +1,7 @@
 {
   "name": "language-rspec",
   "main": "./lib/language-rspec",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "RSpec language package for Atom",
   "keywords": [
     "rspec",
