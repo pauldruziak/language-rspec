@@ -1,3 +1,8 @@
+## 0.8.0
+
+* Fix duplicate key issue (#46)
+* Add cohesion to "it" snippet keys (#48)
+
 ## 0.7.0
 
 * New snippets (#45)
