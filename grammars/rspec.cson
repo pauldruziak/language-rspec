@@ -57,11 +57,18 @@
         'beginCaptures':
           '0':
             'name': 'punctuation.definition.string.begin.ruby'
+        'comment': "string literal with '' delimitor"
         'end': "'"
         'endCaptures':
           '0':
             'name': 'punctuation.definition.string.end.ruby'
         'name': 'string.quoted.single.ruby'
+        'patterns': [
+          {
+            'match': '\\\\\'|\\\\\\\\'
+            'name': 'constant.character.escape.ruby'
+          }
+        ]
       }
       {
         'captures':

@@ -1,3 +1,7 @@
+## 0.9.0
+
+* Fix wrong syntax highlight with `context` or `describe` and escaped quote (#42)
+
 ## 0.8.0
 
 * Fix duplicate key issue (#46)
