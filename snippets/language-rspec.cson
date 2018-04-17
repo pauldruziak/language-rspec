@@ -10,13 +10,13 @@
     'body': "describe ${1:Type}, '${2:description}' do\n  $0\nend"
   "it 'does something' do...end":
     'prefix': 'it'
-    'body': "it '${1:does something}'${2: do\n  $0\nend}"
+    'body': "it '${1:does something}' do\n  $0\nend"
   'it { should do something }':
     'prefix': 'iti'
     'body': "it { should ${1:matcher} }"
   "it 'should do something' do...end":
     'prefix': 'its'
-    'body': "it 'should ${1:do something}'${2: do\n  $0\nend}"
+    'body': "it 'should ${1:do something}' do\n  $0\nend"
   'it { is expected to do something }':
     'prefix': 'itis'
     'body': "it { is_expected.to ${1:matcher} }"
