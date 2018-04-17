@@ -1,3 +1,13 @@
+## 0.9.0
+
+* Fix wrong syntax highlight with `context` or `describe` and escaped quote (#42)
+* Fix the escape character and interpolation grammar for string literals with "" delimitors (#49)
+
+## 0.8.0
+
+* Fix duplicate key issue (#46)
+* Add cohesion to "it" snippet keys (#48)
+
 ## 0.7.0
 
 * New snippets (#45)

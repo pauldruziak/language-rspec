@@ -46,22 +46,38 @@
         'beginCaptures':
           '0':
             'name': 'punctuation.definition.string.begin.ruby'
+        'comment': 'string literal with interpolation and "" delimitor'
         'end': '"'
         'endCaptures':
           '0':
             'name': 'punctuation.definition.string.end.ruby'
         'name': 'string.quoted.double.interpolated.ruby'
+        'patterns': [
+          {
+            'include': '#interpolated_ruby'
+          }
+          {
+            'include': '#escaped_char'
+          }
+        ]
       }
       {
         'begin': "'"
         'beginCaptures':
           '0':
             'name': 'punctuation.definition.string.begin.ruby'
+        'comment': "string literal with '' delimitor"
         'end': "'"
         'endCaptures':
           '0':
             'name': 'punctuation.definition.string.end.ruby'
         'name': 'string.quoted.single.ruby'
+        'patterns': [
+          {
+            'match': '\\\\\'|\\\\\\\\'
+            'name': 'constant.character.escape.ruby'
+          }
+        ]
       }
       {
         'captures':
@@ -82,5 +98,52 @@
             'include': 'source.ruby'
           }
         ]
+      }
+    ]
+  'escaped_char':
+    'match': '\\\\(?:[0-7]{1,3}|x[\\da-fA-F]{1,2}|.)'
+    'name': 'constant.character.escape.ruby'
+  'interpolated_ruby':
+    'patterns': [
+      {
+        'begin': '#{'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.section.embedded.begin.ruby'
+        'contentName': 'source.ruby'
+        'end': '}'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.section.embedded.end.ruby'
+        'name': 'meta.embedded.line.ruby'
+        'patterns': [
+          {
+            'include': '#nest_curly_and_self'
+          }
+          {
+            'include': '$self'
+          }
+        ]
+      }
+      {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.variable.ruby'
+        'match': '(#@)[a-zA-Z_]\\w*'
+        'name': 'variable.other.readwrite.instance.ruby'
+      }
+      {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.variable.ruby'
+        'match': '(#@@)[a-zA-Z_]\\w*'
+        'name': 'variable.other.readwrite.class.ruby'
+      }
+      {
+        'captures':
+          '1':
+            'name': 'punctuation.definition.variable.ruby'
+        'match': '(#\\$)[a-zA-Z_]\\w*'
+        'name': 'variable.other.readwrite.global.ruby'
       }
     ]

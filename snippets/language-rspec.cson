@@ -8,13 +8,16 @@
   'describe (type, string)':
     'prefix': 'dests'
     'body': "describe ${1:Type}, '${2:description}' do\n  $0\nend"
-  'it (does something)':
+  "it 'does something' do...end":
     'prefix': 'it'
     'body': "it '${1:does something}'${2: do\n  $0\nend}"
   'it { should do something }':
     'prefix': 'iti'
     'body': "it { should ${1:matcher} }"
-  'it (is expected to do something)':
+  "it 'should do something' do...end":
+    'prefix': 'its'
+    'body': "it 'should ${1:do something}'${2: do\n  $0\nend}"
+  'it { is expected to do something }':
     'prefix': 'itis'
     'body': "it { is_expected.to ${1:matcher} }"
   'Matcher (Custom)':
@@ -83,9 +86,6 @@
   'feature':
     'prefix': 'sce'
     'body': "scenario '${1:scenario description}' do\n  $0\nend"
-  'it (should do something)':
-    'prefix': 'its'
-    'body': "it 'should ${1:do something}'${2: do\n  $0\nend}"
   'let':
     'prefix': 'let'
     'body': 'let(:${1:instance}) { $0 }'
