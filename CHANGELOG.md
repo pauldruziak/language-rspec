@@ -1,6 +1,7 @@
 ## 0.10.0
 
 * Fix the broken `it` and `its` snippets (#50)
+* Improve the `des` and `it` autocompletion snippet names (#51)
 
 ## 0.9.0
 

@@ -1,25 +1,25 @@
 '.source.ruby.rspec':
-  'describe (String)':
+  "describe 'subject' do … end":
     'prefix': 'des'
     'body': "describe '${1:subject}' do\n  $0\nend"
-  'describe (type)':
+  'describe Type do … end':
     'prefix': 'dest'
     'body': 'describe ${1:Type} do\n  $0\nend'
-  'describe (type, string)':
+  "describe Type, 'subject' do … end":
     'prefix': 'dests'
-    'body': "describe ${1:Type}, '${2:description}' do\n  $0\nend"
-  "it 'does something' do...end":
+    'body': "describe ${1:Type}, '${2:subject}' do\n  $0\nend"
+  "it 'does something' do … end":
     'prefix': 'it'
     'body': "it '${1:does something}' do\n  $0\nend"
-  'it { should do something }':
+  'it { should do_something }':
     'prefix': 'iti'
-    'body': "it { should ${1:matcher} }"
-  "it 'should do something' do...end":
+    'body': "it { should ${1:do_something} }"
+  "it 'should do something' do … end":
     'prefix': 'its'
     'body': "it 'should ${1:do something}' do\n  $0\nend"
-  'it { is expected to do something }':
+  'it { is_expected.to do_something }':
     'prefix': 'itis'
-    'body': "it { is_expected.to ${1:matcher} }"
+    'body': "it { is_expected.to ${1:do_something} }"
   'Matcher (Custom)':
     'prefix': 'matc'
     'body': 'class ${1:ReverseTo}\n  def initialize($3)\n    @$3 = $3\n  end\n\n  def matches?(actual)\n    @actual = actual\n    # Satisfy expectation here. Return false or raise an error if it\'s not met.\n    ${0:@actual.reverse.should == @$3}\n    true\n  end\n\n  def failure_message_for_should\n    "expected #{@actual.inspect} to $2 #{@$3.inspect}, but it didn\'t"\n  end\n\n  def failure_message_for_should_not\n    "expected #{@actual.inspect} not to $2 #{@$3.inspect}, but it did"\n  end\nend\n\ndef ${2:reverse_to}(${3:expected})\n  $1.new($3)\nend'
