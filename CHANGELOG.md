@@ -1,3 +1,7 @@
+## 0.10.0
+
+* Fix the broken `it` and `its` snippets (#50)
+
 ## 0.9.0
 
 * Fix wrong syntax highlight with `context` or `describe` and escaped quote (#42)
