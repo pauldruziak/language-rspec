@@ -81,3 +81,37 @@ describe 'rspec grammar', ->
         {tokens} = grammar.tokenizeLine keyword
         expect(tokens[0].value).toEqual keyword
         expect(tokens[0].scopes).toEqual ['source.ruby.rspec', scope]
+
+  describe 'should', ->
+    it 'highlights it in an assertion', ->
+      {tokens} = grammar.tokenizeLine('count.should eq 42')
+
+      expect(tokens[1]).toEqual(
+        value: 'should',
+        scopes: ['source.ruby.rspec', 'keyword.other.example.rspec']
+      )
+
+    it 'does NOT highlight it inside another method', ->
+      {tokens} = grammar.tokenizeLine('it_should_behave_like "api controller"')
+
+      expect(tokens).toEqual([
+        value: 'it_should_behave_like "api controller"',
+        scopes: ['source.ruby.rspec']
+      ])
+
+  describe 'should_not', ->
+    it 'highlights it in an assertion', ->
+      {tokens} = grammar.tokenizeLine('count.should_not eq 42')
+
+      expect(tokens[1]).toEqual(
+        value: 'should_not',
+        scopes: ['source.ruby.rspec', 'keyword.other.example.rspec']
+      )
+
+    it 'does NOT highlight it inside another method', ->
+      {tokens} = grammar.tokenizeLine('it_should_not_behave_like "api controller"')
+
+      expect(tokens).toEqual([
+        value: 'it_should_not_behave_like "api controller"',
+        scopes: ['source.ruby.rspec']
+      ])
