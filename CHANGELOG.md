@@ -1,3 +1,7 @@
+## 0.11.0
+
+* Update regex for should/should_not (#52)
+
 ## 0.10.0
 
 * Fix the broken `it` and `its` snippets (#50)
