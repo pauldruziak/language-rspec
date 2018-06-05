@@ -12,7 +12,7 @@
     'name': 'keyword.other.example.rspec'
   }
   {
-    'match': '(should_not|should)'
+    'match': '\\b(should_not|should)\\b'
     'name': 'keyword.other.example.rspec'
   }
   {
