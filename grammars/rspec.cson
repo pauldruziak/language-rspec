@@ -8,7 +8,7 @@
     'include': '#behaviour'
   }
   {
-    'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|xspecify|xexample|expect)(?!\\s=|=)\\b'
+    'match': '(?<!\\.)\\b(it|specify|example|scenario|pending|skip|xit|fit|xspecify|xexample|expect)(?!\\s=|=)\\b'
     'name': 'keyword.other.example.rspec'
   }
   {
@@ -29,7 +29,7 @@
 ]
 'repository':
   'behaviour':
-    'begin': '^(RSpec)?(?:\\.|\\s*)(describe|context|feature)(?! =|=)\\b'
+    'begin': '^(RSpec)?(?:\\.|\\s*)(describe|context|fdescribe|fcontext|xdescribe|xcontext|feature)(?! =|=)\\b'
     'beginCaptures':
       '1':
         'name': 'support.class.ruby'
