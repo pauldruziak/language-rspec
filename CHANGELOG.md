@@ -1,3 +1,7 @@
+## 0.12.0
+
+* Add highlighting for focus and filter keywords  (#54)
+
 ## 0.11.0
 
 * Update regex for should/should_not (#52)
